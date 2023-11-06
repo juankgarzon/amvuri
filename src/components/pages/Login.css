@@ -1,0 +1,29 @@
+.estiloDeImagen {
+    background-color: blue;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .estiloDeColumna {
+    background-color: green; /* O el valor de color que desees */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%; 
+  }
+
+  .estiloDeMarco {
+    background-color: '#859b2e';
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    width : 100vw;
+    height : 100vh;
+  }
+
+  
