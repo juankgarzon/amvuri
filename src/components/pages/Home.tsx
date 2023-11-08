@@ -1,6 +1,7 @@
 import React from 'react'
 import NavGeneral from '../navigation/NavGeneral'
 import { Container, Row, Col } from 'react-bootstrap';
+import './Pages.css';
 
 export const Home = () => {
   return (

@@ -5,8 +5,8 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Figure from 'react-bootstrap/Figure';
 
-import './Login.css';
 import Navigation from '../navigation/Navigation';
+import './Pages.css';
 
 export const Login = () => { 
 

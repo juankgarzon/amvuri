@@ -1,6 +1,11 @@
 .brand-highlight {
-    background-color: 'black';
+    background-color: aquamarine;
     color: 'white';
     padding: 4px 8px;
     border-radius: 4px;
   }
+
+  
+.bg-body-tertiary justify-content-between {
+  background-color: goldenrod;
+}
