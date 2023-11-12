@@ -13,7 +13,7 @@ export const Contacto = () => {
     }
   }, []);
 
-<div className="Contactenos"></div>
+  <div className="Contactenos"></div>
 
   return (
     <>
@@ -29,7 +29,7 @@ export const Contacto = () => {
               Teléfono: (57) 3052675508<br />
               Dirección: Huila, Colombia
             </address>
-          </Col>
+          </Col >
           <Col>
             <form>
               <h2>Formulario de Contacto</h2>
@@ -48,8 +48,8 @@ export const Contacto = () => {
               <button type="submit" className="btn btn-primary">Enviar</button>
             </form>
           </Col>
-        </Row>
-      </Container>
+        </Row >
+      </Container >
     </>
   );
 }

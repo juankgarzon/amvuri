@@ -31,10 +31,13 @@ export const Login = () => {
         <Col md={6} className = "estiloDeColumna" noGutters >
         
         <div className="text-center"  >
+
               <h4 className='fw-bold fs-4 ' > ESTUDIO DE AMENAZA, VULNERABILIDAD Y RIESGO</h4>
+            
             <div >
                 <img src="Portada.jpg" alt="Descripción de la imagen" className="estiloDeImagen  img-fluid w-100" />
-              </div>              
+              </div>   
+                         
               <h4 className='fw-bold fs-4 ' > POR MOVIMIENTO EN MASA</h4>              
             </div>
           </Col>
