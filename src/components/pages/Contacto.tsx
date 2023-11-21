@@ -24,8 +24,8 @@ export const Contacto = () => {
             <address>
               <strong>Información de Contacto:</strong><br />
               Correo: contact@example.com<br />
-              Teléfono: (57) 3052675508<br />
-              Dirección: Huila, Colombia
+              Teléfono: (57) 316 2942658 - (57) 305 2675508<br />
+              Ubicación: Colombia
             </address>
           </Col>
           <Col>
