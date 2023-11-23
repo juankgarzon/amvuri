@@ -2,12 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { deleteFichas} from '../pages/services/index';
 
 import { Button, Container, Row, Col, Table } from "react-bootstrap";
+<<<<<<< HEAD
 import { FaPlus, FaEdit, FaTrash, FaBook } from "react-icons/fa";
 import { AiOutlineEnvironment } from "react-icons/ai"; 
+=======
+import { FaPlus, FaEdit, FaSearch, FaTrash, FaBook } from "react-icons/fa";
+import { AiOutlineEnvironment } from "react-icons/ai";
+>>>>>>> bf85814bb32d78804317d147a96904722803173b
 import { BiImages } from "react-icons/bi";
 
 import NavGeneral from '../navigation/NavGeneral';
 import './Pages.css';
+<<<<<<< HEAD
 import AddModal from '../Fichas/resources/AddModal';
 import DetailsModal from '../Fichas/resources/DetalleModal';
 import UpdateModal from '../Fichas/resources/UpdateModal';
@@ -30,6 +36,8 @@ interface Item {
   responsable: String;    
 }
 
+=======
+>>>>>>> bf85814bb32d78804317d147a96904722803173b
 export const Registro = () => {
   const [fichas, setFichas] = useState<Item[]>([]);
   const [showAddModal, setShowAddModal] = useState(false);
@@ -95,7 +103,7 @@ export const Registro = () => {
       <NavGeneral />
 
       <Container fluid>
-      <Row className="justify-content-center">
+        <Row className="justify-content-center">
           <Col xs="auto">
             <div>  
               <Button variant="primary" size="sm" className="custom-button" onClick={handleShowAddModal} >
@@ -107,27 +115,50 @@ export const Registro = () => {
                     Nueva Ficha
                   </div>
                 </div>
+<<<<<<< HEAD
               </Button>
               <AddModal show={showAddModal} handleClose={handleCloseAddModal} handleSave={handleSaveFunction} />
             </div>
           </Col>          
         </Row>        
+=======
+                <div className="text">
+                  Nueva Ficha
+                </div>
+              </div>
+            </Button>
+          </Col>
+          <Col xs="auto">
+            <Button variant="secondary" size="sm" className="custom-button">
+              <div className="button-content">
+                <div className="icon">
+                  <FaSearch />
+                </div>
+                <div className="text">
+                  Buscar Ficha
+                </div>
+              </div>
+            </Button>
+          </Col>
+        </Row>
+>>>>>>> bf85814bb32d78804317d147a96904722803173b
       </Container>
 
-      <Container  className="container-sm  text-center py-3">
+      <Container className="container-sm  text-center py-3">
         <Row className="justify-content-center">
           <Col md={12}>
             <Table responsive striped bordered hover variant="dark" className="table-auto table-custom">
               <thead>
                 <tr className="bg-success p-2 text-white custom-table-header">
                   <th>Número</th>
-                  <th>Responsable</th>                  
-                  <th>Ciudad</th>                  
+                  <th>Responsable</th>
+                  <th>Ciudad</th>
                   <th>Dirección</th>
                   <th>Acción</th>
                 </tr>
               </thead>
               <tbody>
+<<<<<<< HEAD
               {fichas.map((Item) => (             
                   <tr key={String(Item.idFicha)}>                  
                     <td>{Item.idFicha}</td>
@@ -165,6 +196,21 @@ export const Registro = () => {
                     </td>
                   </tr>                  
                 ))} 
+=======
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td className="action-cell">
+                    <FaBook title="Ver Información Ficha" className="action-icons delete-icon" />
+                    <FaEdit title="Editar Ficha" className="action-icons edit-icon" />
+                    <FaTrash title="Eliminar Ficha" className="action-icons delete-icon" />
+                    <BiImages title="Ver Imágenes" className="action-icons delete-icon" />
+                    <AiOutlineEnvironment title="Ubicación del Predio" className="action-icons delete-icon" />
+                  </td>
+                </tr>
+>>>>>>> bf85814bb32d78804317d147a96904722803173b
               </tbody>
             </Table>
 
@@ -184,6 +230,6 @@ export const Registro = () => {
         </Row>
       </Container>
 
-    </>    
+    </>
   )
 }

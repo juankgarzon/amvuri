@@ -2,7 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
-import '../navigation/Navigation.css'
+import '../navigation/NavGeneral.css'
 
 const Navigation = () => {
   return (

@@ -1,19 +1,21 @@
 import React, { useEffect, useRef } from 'react';
-import { Container, Row, Col }from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import Navigation from '../navigation/NavGeneral';
+import './Pages.css';
 
 import './Pages.css';
 
 export const Contacto = () => {
 
   const inputRef = useRef<HTMLInputElement | null>(null);
-     
+
   useEffect(() => {
     if (inputRef.current) {
       inputRef.current.focus();
     }
   }, []);
- 
+
+  <div className="Contactenos"></div>
 
   return (
     <>
@@ -29,7 +31,7 @@ export const Contacto = () => {
               Teléfono: (57) 316 2942658 - (57) 305 2675508<br />
               Ubicación: Colombia
             </address>
-          </Col>
+          </Col >
           <Col>
             <form>
               <h2>Formulario de Contacto</h2>
@@ -48,8 +50,8 @@ export const Contacto = () => {
               <button type="submit" className="btn btn-primary">Enviar</button>
             </form>
           </Col>
-        </Row>
-      </Container>
-    </>    
+        </Row >
+      </Container >
+    </>
   );
 }

@@ -5,8 +5,12 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Figure from 'react-bootstrap/Figure';
 
+<<<<<<< HEAD
 import './Pages.css';
+=======
+>>>>>>> bf85814bb32d78804317d147a96904722803173b
 import Navigation from '../navigation/Navigation';
+import './Pages.css';
 
 export const Login = () => { 
 
@@ -31,10 +35,13 @@ export const Login = () => {
         <Col md={6} className = "estiloDeColumna" noGutters >
         
         <div className="text-center"  >
+
               <h4 className='fw-bold fs-4 ' > ESTUDIO DE AMENAZA, VULNERABILIDAD Y RIESGO</h4>
+            
             <div >
                 <img src="Portada.jpg" alt="Descripción de la imagen" className="estiloDeImagen  img-fluid w-100" />
-              </div>              
+              </div>   
+                         
               <h4 className='fw-bold fs-4 ' > POR MOVIMIENTO EN MASA</h4>              
             </div>
           </Col>

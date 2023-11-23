@@ -1,19 +1,26 @@
 import React from 'react'
 import NavGeneral from '../navigation/NavGeneral'
 import { Container, Row, Col } from 'react-bootstrap';
+import './Pages.css';
 
 import './Pages.css';
 
 export const Home = () => {
   return (
     <>
-      <NavGeneral/>
+      <NavGeneral />
 
       <Container>
         <Row className="justify-content-center align-items-center" style={{ minHeight: '100vh' }}>
           <Col xs={12} md={6} className="text-center">
+<<<<<<< HEAD
             
           <h1>Bienvenido a Nuestra Página de Inicio</h1>
+=======
+
+
+            <h1>Bienvenido a Nuestra Página de Inicio</h1>
+>>>>>>> bf85814bb32d78804317d147a96904722803173b
             
             <p>Registro de información de campo para edificaciones expuestas a la ocurrencia de movimientos en masa</p>
 
@@ -32,6 +39,7 @@ export const Home = () => {
               el manejo de desastres, cuyo fin es contribuir a la seguridad, el bienestar, la calidad de vida
               de las personas y al desarrollo sostenible. El proceso planteado en esta guía comprende tres
               grandes etapas: 1) análisis del riesgo, 2) evaluación del riesgo, y 3) mitigación y prevención
+<<<<<<< HEAD
               del riesgo. Cada una de ellas consta, a su vez, de una serie de elementos y procesos
               que, de acuerdo con el tipo de evaluación que se realice, pueden ser de mayor o menor grado de detalle y complejidad.
             </p>
@@ -40,14 +48,20 @@ export const Home = () => {
 
 
           </Col>
+=======
+              del riesgo (figura 1-1). Cada una de ellas consta, a su vez, de una serie de elementos y procesos
+              que, de acuerdo con el tipo de evaluación que se realice, pueden ser de mayor o menor grado de detalle y complejidad.
+            </p>
+       
+            
+          </Col >
+>>>>>>> bf85814bb32d78804317d147a96904722803173b
           <Col xs={12} md={6} className="text-center">
             <img src="Portada.jpg" alt="Imagen de inicio" className="img-fluid" />
           </Col>
-        </Row>
-      </Container>  
 
-
-
+        </Row >
+      </Container >
     </>
   )
 }
