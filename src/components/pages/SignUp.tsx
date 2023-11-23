@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Figure from 'react-bootstrap/Figure';
 
-import './SignUp.css';
+import './Pages.css';
 import NavRegistro from '../navigation/NavRegistro'
 
 export const SignUp = () => {

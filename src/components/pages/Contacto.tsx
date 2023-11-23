@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import { Container, Row, Col }from 'react-bootstrap';
 import Navigation from '../navigation/NavGeneral';
 
+import './Pages.css';
+
 export const Contacto = () => {
 
   const inputRef = useRef<HTMLInputElement | null>(null);

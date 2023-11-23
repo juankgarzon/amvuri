@@ -7,7 +7,7 @@ import { AiOutlineEnvironment } from "react-icons/ai";
 import { BiImages } from "react-icons/bi";
 
 import NavGeneral from '../navigation/NavGeneral';
-import './Registro.css';
+import './Pages.css';
 import AddModal from '../Fichas/resources/AddModal';
 import DetailsModal from '../Fichas/resources/DetalleModal';
 import UpdateModal from '../Fichas/resources/UpdateModal';

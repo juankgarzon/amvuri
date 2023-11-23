@@ -121,6 +121,7 @@ function AddModal({ show, handleClose, handleSave } : AddModalProps) {
                           name="idficha"
                           value={idficha}
                           onChange={handlefichaChange} 
+                          required
                         />
                       </Form.Group>
                     </Col>

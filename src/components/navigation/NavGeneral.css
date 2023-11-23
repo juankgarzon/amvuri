@@ -1,0 +1,70 @@
+.brand-highlight{
+    color: DodgerBlue;
+    padding: 40px;
+    font-family: Sans-Serif;
+    text-align: center;
+}
+
+
+.bg-body-tertiary{
+    background-color: aqua ;
+}
+
+.NavGeneral{
+    color-scheme: grey;
+   
+}
+
+.Navbar {
+    color: aquamarine;
+    color: rgb(75, 255, 30);
+  padding: 40px;
+  font-family: Sans-Serif;
+  text-align: center;
+}
+
+.Container {
+  background-color: forestgreen;
+  color-scheme: rgb(194, 77, 77);
+  color: DodgerBlue;
+  padding: 40px;
+  font-family: Sans-Serif;
+  text-align: center;
+
+}
+
+.Nav {
+  color-scheme: green;
+  color: rgb(191, 218, 130);
+  padding: 40px;
+  font-family: Sans-Serif;
+  text-align: center;
+}
+
+.brand-highlight {
+  background-color: aquamarine;
+  color: 'white';
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+
+.bg-body-tertiary justify-content-between {
+background-color: goldenrod;
+}
+
+.brand-highlight {
+  background-color: greenyellow ;
+  color: 'white';
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.Navbar.Brand{
+  background-color: rgb(146, 176, 240)) ;
+}
+
+.justify-content-end{
+  background-color: rgb(182, 218, 85) ;
+  color: 'white';
+}

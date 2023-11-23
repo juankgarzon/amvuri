@@ -1,0 +1,18 @@
+.label-input-container {
+    display: flex;
+    align-items: center;
+}
+
+.label-input-container label {
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.label-input-container input {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0;
+    width: auto;
+}
+

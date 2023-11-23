@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Modal, Button } from "react-bootstrap";
 import { getFichaById } from '../../../components/pages/services/index';
-//import { Map } from 'googlemaps';
+import './UbicacionModal.css';
 
 interface DetailsModalProps {
     show: boolean;
@@ -26,6 +26,8 @@ interface FichaData {
 const UbicacionModal = ({ show, handleClose, idficha }: DetailsModalProps) => {
 
     const [fichaDetails, setFichaDetails] = useState<FichaData | null>(null);
+    const [latitude, setLatitude] = useState<number | null>(null);
+    const [longitude, setLongitude] = useState<number | null>(null);
     
 useEffect(() => {
  
@@ -33,11 +35,23 @@ useEffect(() => {
             try {
                 const response = await getFichaById(idficha);
                 
-                if (response && response.data) {                    
-                    setFichaDetails(response.data.fichas || null);    
-
-                } else {
-                    console.error('Error al obtener detalles de la ficha: Respuesta incorrecta');
+                if (response && response.data) {     
+                    setFichaDetails(response.data.fichas || null);   
+                    const fichaData = response.data.fichas || null;                    
+              
+                    if (fichaData) {
+                      const lat = parseFloat(fichaData.coord_este);
+                      const long = parseFloat(fichaData.coord_noorte);
+              
+                      if (!isNaN(lat) && !isNaN(long)) {                      
+                        setLatitude(lat);
+                        setLongitude(long);
+                      } else {
+                        console.error('Valores de coordenadas inválidos:', lat, long);
+                      }
+                    } else {
+                      console.error('Datos de la ficha no encontrados');
+                    }
                 }
             } catch (error) {
                 console.error('Error al obtener detalles de la ficha:', error);
@@ -47,33 +61,24 @@ useEffect(() => {
         if (show) {
             fetchData();                        
         }
-
-      
-const latitude = 2.44; 
-const longitude = -76.61; 
-
-if (window.google) {
-    // Verifica si la API de Google Maps está disponible
-    const mapElement = document.getElementById('map');
-    if (mapElement) {
-        // Crea un objeto LatLng con las coordenadas
-        const myLatLng = new window.google.maps.LatLng(latitude, longitude);
-
-        // Opciones del mapa con el centro en las coordenadas especificadas
-        const mapOptions = {
-            zoom: 12,
-            center: myLatLng, // Centra el mapa en las coordenadas
-        };
-
-        // Crea un nuevo mapa con las opciones
-        const map = new window.google.maps.Map(mapElement, mapOptions);
-    }
-}
-
-
+    
     }, [show, idficha]);
 
-   
+    useEffect(() => {
+        if (latitude !== null && longitude !== null && window.google) {
+            const mapElement = document.getElementById('map');
+            if (mapElement) {
+               const myLatLng = new window.google.maps.LatLng(latitude, longitude);
+                const mapOptions = {
+                    zoom: 12,
+                    center: myLatLng,
+                };
+                const map = new window.google.maps.Map(mapElement, mapOptions);
+            }
+        }
+    }, [latitude, longitude]);
+
+  
   return (
     
         <Modal show={show} onHide={handleClose}  size="lg">
@@ -83,11 +88,11 @@ if (window.google) {
             <Modal.Body>
                 {fichaDetails && (
                     <div>                        
-                        <div>
+                        <div className="label-input-container">
                             <label>Coordenada Este: </label>
                             <input type="text" value={fichaDetails.coord_este} readOnly />
                         </div>
-                        <div>
+                        <div className="label-input-container">
                             <label>Coordenada Norte: </label>
                             <input type="text" value={fichaDetails.coord_noorte} readOnly />
                         </div>              
@@ -95,9 +100,8 @@ if (window.google) {
                 )}        
 
                 <div>
-                    <h3>Localización del Predio</h3>
-                    <div id="map" style={{ width: '100%', height: '400px' }}></div>
-                    
+                    <Modal.Title className="text-center font-weight-bold" >Localización del Predio</Modal.Title>                    
+                    <div id="map" style={{ width: '100%', height: '400px' }}></div>                    
                 </div>       
             </Modal.Body>
             <Modal.Footer>
